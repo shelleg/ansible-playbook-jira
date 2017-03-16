@@ -1,8 +1,8 @@
 ---
-- hosts: all
+- hosts: jiraallin1
   become: yes
   become_user: root
-  #gather_facts: no
   roles:
-    - { role: ../galaxy-roles/<role name> }
-    #- { role: ../site-roles/<role name> }
+    - role: oracle-java
+    - role: mariadb
+    - role: jira
